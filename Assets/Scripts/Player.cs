@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class Player : MonoBehaviour
 {
     public delegate void OnCubeHit(GameObject cube);
-    public static OnCubeHit onCubeHit;
+    public static event OnCubeHit onCubeHit;
 
     
     void Update()

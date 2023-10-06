@@ -9,6 +9,11 @@ public class EventManager : MonoBehaviour
         Player.onCubeHit += DestroyCube;
     }
 
+    void OnDisable()
+    {
+        Player.onCubeHit -= DestroyCube;
+    }
+
     void DestroyCube(GameObject cube)
     {
         Destroy(cube);
